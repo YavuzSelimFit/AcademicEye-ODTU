@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="dark" lang="tr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Academic Eye - ODTÜ EE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"/>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: { primary: "#1132d4", background: "#101322" },
+            fontFamily: { display: ["Space Grotesk", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="font-display bg-background text-white min-h-screen flex flex-col">
+
+    <header class="flex items-center justify-between border-b border-white/10 px-6 py-4 md:px-10 sticky top-0 bg-background/80 backdrop-blur-md z-50">
+        <div class="flex items-center gap-2 text-xl font-bold">
+            <span class="text-primary">◆</span> Academic Eye
+        </div>
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+            <a href="{{ url_for('home') }}" class="hover:text-primary transition">Ana Sayfa</a>
+            <a href="{{ url_for('pricing') }}" class="hover:text-primary transition">Fiyatlandırma</a>
+            <a href="{{ url_for('login') }}" class="hover:text-primary transition">Giriş Yap</a>
+            <a href="{{ url_for('register') }}" class="bg-primary px-4 py-2 rounded-lg hover:bg-blue-700 transition">Kayıt Ol</a>
+        </div>
+    </header>
+
+    <main class="flex flex-col items-center text-center px-4 py-10 md:py-20 gap-6 flex-grow">
+
+        <h1 class="text-4xl md:text-6xl font-black leading-tight max-w-4xl">
+            Akademik Kariyerinizde <br><span class="text-primary">Bir Adım Önde Olun</span>
+        </h1>
+        <p class="text-gray-400 max-w-xl text-lg">
+            ODTÜ EE tarafından geliştirilen yapay zeka asistanı.
+            Sizin ilgi alanlarınızı öğrenir, ArXiv'i tarar, analiz eder ve her sabah raporlar.
+        </p>
+
+        <div class="flex gap-4 mt-6">
+            <a href="{{ url_for('register') }}" class="bg-primary text-white px-8 py-3 rounded-xl font-bold text-lg hover:bg-blue-700 transition shadow-lg shadow-blue-900/50">
+                Hemen Başla
+            </a>
+            <a href="{{ url_for('pricing') }}" class="border border-white/20 px-8 py-3 rounded-xl font-bold hover:bg-white/5 transition">
+                Paketleri İncele
+            </a>
+        </div>
+
+        <div class="mt-12 w-full max-w-5xl aspect-video bg-cover bg-center rounded-2xl border border-white/10 flex items-center justify-center relative overflow-hidden shadow-2xl"
+             style="background-image: url('{{ url_for('static', filename='img/bg.png') }}');">
+
+             <div class="absolute inset-0 bg-black/20"></div>
+
+        </div>
+    </main>
+
+    <footer class="border-t border-white/10 py-8 text-center text-gray-500 text-sm mt-auto">
+        © 2025 ODTÜ Elektrik-Elektronik Mühendisliği. Tüm hakları saklıdır.
+    </footer>
+
+</body>
+</html>

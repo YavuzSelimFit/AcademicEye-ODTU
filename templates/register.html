@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="dark" lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Kayıt Ol - Academic Eye</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+    <script>
+        tailwind.config = { theme: { extend: { colors: { primary: "#1132d4", background: "#101322" }, fontFamily: { display: ["Space Grotesk", "sans-serif"] } } } };
+    </script>
+</head>
+
+<body class="bg-background font-display text-white flex items-center justify-center min-h-screen p-4">
+    <div class="w-full max-w-md bg-white/5 border border-white/10 p-8 rounded-2xl shadow-2xl">
+        <div class="text-center mb-6">
+            <h1 class="text-3xl font-bold">Hesap Oluştur</h1>
+            <p class="text-gray-400 mt-2">Kişiselleştirilmiş akademik akışınız.</p>
+        </div>
+
+        <form action="{{ url_for('register') }}" method="POST" class="space-y-4">
+            <div class="grid grid-cols-2 gap-4">
+                <div><label class="text-xs text-gray-400">Ad</label><input name="ad" type="text" required
+                        class="w-full bg-black/20 border border-white/10 rounded-lg p-3 mt-1 focus:border-primary outline-none">
+                </div>
+                <div><label class="text-xs text-gray-400">Soyad</label><input name="soyad" type="text" required
+                        class="w-full bg-black/20 border border-white/10 rounded-lg p-3 mt-1 focus:border-primary outline-none">
+                </div>
+            </div>
+
+            <div>
+                <label class="text-xs text-gray-400">Kurum / Üniversite (İngilizce)</label>
+                <input name="university" type="text" required placeholder="Örn: Middle East Technical University"
+                    class="w-full bg-black/20 border border-white/10 rounded-lg p-3 mt-1 focus:border-primary outline-none text-white">
+                <p class="text-[9px] text-gray-500 mt-1">Google Scholar'da yazan kurum adını girmeniz önemlidir.</p>
+            </div>
+
+            <div><label class="text-xs text-gray-400">E-posta (Giriş için)</label><input name="email" type="email"
+                    required
+                    class="w-full bg-black/20 border border-white/10 rounded-lg p-3 mt-1 focus:border-primary outline-none">
+            </div>
+
+            <div><label class="text-xs text-gray-400">Şifre</label><input name="password" type="password" required
+                    class="w-full bg-black/20 border border-white/10 rounded-lg p-3 mt-1 focus:border-primary outline-none">
+            </div>
+
+            <div><label class="text-xs text-gray-400">Telegram Chat ID</label><input name="chat_id" type="text"
+                    placeholder="Örn: 7444605384" required
+                    class="w-full bg-black/20 border border-white/10 rounded-lg p-3 mt-1 focus:border-primary outline-none">
+            </div>
+
+            <div><label class="text-xs text-gray-400">WhatsApp Numarası 📱</label><input name="whatsapp_phone"
+                    type="tel" placeholder="Örn: 905411378835 (ülke kodu ile)"
+                    class="w-full bg-black/20 border border-white/10 rounded-lg p-3 mt-1 focus:border-primary outline-none">
+            </div>
+
+            <div>
+                <label class="text-xs text-primary font-bold">Araştırma İlgi Alanları</label>
+                <textarea name="keywords" required rows="3" placeholder="Örn: Deep Learning, Wireless Communication..."
+                    class="w-full bg-black/20 border border-primary/50 rounded-lg p-3 mt-1 focus:border-primary outline-none"></textarea>
+            </div>
+
+            <button type="submit"
+                class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-3 rounded-lg mt-2 transition">Kayıt
+                Ol 🚀</button>
+        </form>
+        <div class="text-center mt-4"><a href="{{ url_for('login') }}"
+                class="text-sm text-gray-500 hover:text-white">Zaten hesabın var mı? Giriş Yap</a></div>
+    </div>
+</body>
+
+</html>

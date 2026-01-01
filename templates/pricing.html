@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="dark" lang="tr">
+<head>
+    <meta charset="utf-8"/>
+    <title>Fiyatlandırma - Academic Eye</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"/>
+    <script>
+      tailwind.config = {
+        theme: { extend: { colors: { primary: "#1132d4", background: "#101322" }, fontFamily: { display: ["Space Grotesk", "sans-serif"] } } },
+      };
+    </script>
+</head>
+<body class="bg-background font-display text-white">
+
+    <header class="flex items-center justify-between border-b border-white/10 px-10 py-4">
+        <div class="text-xl font-bold">Academic Eye</div>
+        <a href="{{ url_for('home') }}" class="text-sm hover:text-primary">← Geri Dön</a>
+    </header>
+
+    <main class="py-20 px-4 text-center">
+        <h1 class="text-4xl font-black mb-4">Akademik Gelişime Yatırım Yapın</h1>
+        <p class="text-gray-400 mb-12">Size en uygun planı seçin.</p>
+
+        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-8 text-left hover:border-primary transition">
+                <h3 class="text-xl font-bold">Öğrenci</h3>
+                <div class="text-3xl font-black my-4">₺0 <span class="text-sm font-normal text-gray-400">/ay</span></div>
+                <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                    <li>✓ Günde 1 Özet</li>
+                    <li>✓ Standart Ses</li>
+                </ul>
+                <a href="{{ url_for('register') }}" class="block text-center w-full bg-white/10 hover:bg-white/20 py-3 rounded-lg font-bold">Seç</a>
+            </div>
+
+            <div class="bg-white/5 border-2 border-primary rounded-2xl p-8 text-left relative">
+                <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-xs px-3 py-1 rounded-full font-bold">ÖNERİLEN</span>
+                <h3 class="text-xl font-bold text-primary">Akademisyen</h3>
+                <div class="text-3xl font-black my-4">₺199 <span class="text-sm font-normal text-gray-400">/ay</span></div>
+                <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                    <li>✓ Sınırsız Özet</li>
+                    <li>✓ Neural (Doğal) Ses</li>
+                    <li>✓ Deep Research (PDF)</li>
+                </ul>
+                <a href="{{ url_for('register') }}" class="block text-center w-full bg-primary hover:bg-blue-700 py-3 rounded-lg font-bold">Hemen Başla</a>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-8 text-left hover:border-primary transition">
+                <h3 class="text-xl font-bold">Kurumsal</h3>
+                <div class="text-3xl font-black my-4">₺499 <span class="text-sm font-normal text-gray-400">/ay</span></div>
+                <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                    <li>✓ Tüm Bölüm Erişimi</li>
+                    <li>✓ API Desteği</li>
+                </ul>
+                <a href="{{ url_for('register') }}" class="block text-center w-full bg-white/10 hover:bg-white/20 py-3 rounded-lg font-bold">İletişime Geç</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

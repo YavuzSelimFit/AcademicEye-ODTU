@@ -1,0 +1,125 @@
+# ===========================
+# GİZLİ ŞİFRELER (ASLA YÜKLEME)
+# ===========================
+.env
+.env.local
+.env.production
+
+# ===========================
+# PYTHON
+# ===========================
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ===========================
+# IDE
+# ===========================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ===========================
+# VERİTABANI
+# ===========================
+*.db
+*.sqlite
+*.sqlite3
+academic_memory.db
+academic_memory.db-shm
+academic_memory.db-wal
+
+# ===========================
+# LOGLAR
+# ===========================
+*.log
+bot_log.txt
+whatsapp_bot_log.txt
+app_debug.log
+
+# ===========================
+# GEÇİCİ DOSYALAR
+# ===========================
+*.mp3
+*.wav
+*.pdf
+*.tmp
+*.temp
+*.cache
+
+# ===========================
+# VECTOR DATABASE
+# ===========================
+academic_vector_db/
+chroma_db/
+
+# ===========================
+# DOWNLOADS & CACHE
+# ===========================
+downloads/
+cache/
+temp/
+
+# ===========================
+# SELENIUM
+# ===========================
+*.log
+chromedriver.exe
+geckodriver.exe
+
+# ===========================
+# JUPYTER NOTEBOOK
+# ===========================
+.ipynb_checkpoints/
+*.ipynb
+
+# ===========================
+# PYTEST
+# ===========================
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ===========================
+# MACOS
+# ===========================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ===========================
+# WINDOWS
+# ===========================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ===========================
+# DOCS (Banner hariç)
+# ===========================
+# docs/ klasörünü izin ver banner için
+!docs/
+!docs/banner.png
